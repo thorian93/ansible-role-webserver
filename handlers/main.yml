@@ -1,0 +1,20 @@
+---
+- name: restart webserver apache
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: restarted
+
+- name: reload webserver apache
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: reloaded
+
+- name: restart webserver nginx
+  service:
+    name: "{{ webserver_nginx_name }}"
+    state: restarted
+
+- name: reload webserver nginx
+  service:
+    name: "{{ webserver_nginx_name }}"
+    state: reloaded

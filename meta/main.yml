@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  author: Thorian93
+  description: Ansible Role Webserver
+  license: "license (MIT)"
+
+dependencies:
+  - { role: ansible-role-apache2, when: webserver_role == "apache" }
+  - { role: ansible-role-nginx, when: webserver_role == "nginx" }
