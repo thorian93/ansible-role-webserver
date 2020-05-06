@@ -4,3 +4,11 @@ webserver_stable_os:
   - Ubuntu 18
   - Debian 9
   - Debian 10
+  - CentOS 7
+  - CentOS 8
+  - Fedora 30
+  - Fedora 31
+  - openSUSE Leap 15
+  - openSUSE Leap 42
+
+webserver_name: []
