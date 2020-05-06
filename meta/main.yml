@@ -4,6 +4,6 @@ galaxy_info:
   description: Ansible Role Webserver
   license: "license (MIT)"
 
-dependencies:
-  - { role: ansible-role-apache2, when: webserver_role == "apache" }
-  - { role: ansible-role-nginx, when: webserver_role == "nginx" }
+# dependencies:
+#   - { role: ansible-role-apache2, when: webserver_name == "apache" }
+#   - { role: ansible-role-nginx, when: webserver_name == "nginx" }
