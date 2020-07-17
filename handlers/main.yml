@@ -18,3 +18,11 @@
   service:
     name: "{{ webserver_nginx_name }}"
     state: reloaded
+
+- name: restart webserver none
+  debug:
+    msg: "No webserver could be detected! Make sure you have a webserver installed!"
+
+- name: reload webserver none
+  debug:
+    msg: "No webserver could be detected! Make sure you have a webserver installed!"
