@@ -9,24 +9,9 @@
 - name: Include OS family specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Detect Webserver Apache2.
-  command: systemctl status apache2
-  register: webserver_detect_server_apache2
-  failed_when: webserver_detect_server_apache2.rc > 5
-  ignore_errors: 'true'
-
-- name: Detect Webserver HTTPD.
-  command: systemctl status httpd
-  register: webserver_detect_server_httpd
-  failed_when: webserver_detect_server_httpd.rc > 5
-  ignore_errors: 'true'
-
-- name: Detect Webserver NGINX.
-  command: systemctl status nginx
-  register: webserver_detect_server_nginx
-  failed_when: webserver_detect_server_nginx.rc > 5
-  ignore_errors: 'true'
+- name: Populate Service Facts.
+  service_facts:
 
 - name: Set Fact Webserver.
   set_fact:
-    webserver_name: "{% if webserver_detect_server_apache2.rc != 4 %}apache{% elif webserver_detect_server_httpd.rc != 4  %}apache{% elif webserver_detect_server_nginx.rc != 4  %}nginx{% else %}none{% endif %}"
+    webserver_name: "{% if 'apache2.service' in services %}apache{% elif 'httpd.service' in services %}apache{% elif 'nginx.service' in services %}nginx{% else %}none{% endif %}"
