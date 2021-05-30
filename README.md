@@ -2,9 +2,9 @@
 
 This role is merely a meta role to enable unified usage of webserver roles.
 
-[![Ansible Role: Webserver](https://img.shields.io/ansible/role/51301?style=flat-square)](https://galaxy.ansible.com/thorian93/ansible_role_webserver)
-[![Ansible Role: Webserver](https://img.shields.io/ansible/quality/51301?style=flat-square)](https://galaxy.ansible.com/thorian93/ansible_role_webserver)
-[![Ansible Role: Webserver](https://img.shields.io/ansible/role/d/51301?style=flat-square)](https://galaxy.ansible.com/thorian93/ansible_role_webserver)
+[![Ansible Role: Webserver](https://img.shields.io/ansible/role/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
+[![Ansible Role: Webserver](https://img.shields.io/ansible/quality/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
+[![Ansible Role: Webserver](https://img.shields.io/ansible/role/d/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
 
 ## Here be Dragons!
 
