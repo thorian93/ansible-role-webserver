@@ -9,6 +9,26 @@
     name: "{{ webserver_apache_name }}"
     state: reloaded
 
+- name: restart webserver apache2
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: restarted
+
+- name: reload webserver apache2
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: reloaded
+
+- name: restart webserver httpd
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: restarted
+
+- name: reload webserver httpd
+  service:
+    name: "{{ webserver_apache_name }}"
+    state: reloaded
+
 - name: restart webserver nginx
   service:
     name: "{{ webserver_nginx_name }}"
