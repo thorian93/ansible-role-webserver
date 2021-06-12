@@ -1,6 +1,6 @@
 # Ansible Role: Webserver
 
-This role is merely a meta role to enable unified usage of webserver roles.
+This role is a meta role to enable unified usage of webserver roles. It provides variables to be used in different roles.
 
 [![Ansible Role: Webserver](https://img.shields.io/ansible/role/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
 [![Ansible Role: Webserver](https://img.shields.io/ansible/quality/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
@@ -8,7 +8,7 @@ This role is merely a meta role to enable unified usage of webserver roles.
 
 ## Here be Dragons!
 
-This role is mainly intended for my personal use. I can not guarantee any stability or usability for your use case. Study the role carefully before using it!
+No dragons here anymore.
 
 ## Requirements
 
@@ -21,7 +21,25 @@ No special requirements; note that this role requires root access, so either run
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `vars/Debian.yml` and `vars/RedHat.yml`):
+**Note that the variables in the `vars/` directory are not intended to be used directly!**
+
+Rather refer to the variables this role discovers:
+
+    webserver_name: []
+
+The name of the webserver. Currently the following can be discovered: `apache2`, `httpd` and `nginx`.
+
+    webserver_user: []
+
+The user the webserver runs as. See the corresponding file in `vars/` for details.
+
+    webserver_conf_file: []
+
+The main configuration file of the webserver. See the corresponding file in `vars/` for details.
+
+---
+
+For full disclosure the variables from `vars/Debian.yml`, `vars/RedHat.yml` and `vars/Suse.yml` are listed here anyway:
 
     webserver_apache_name: apache2
     webserver_apache_user: www-data
@@ -29,7 +47,7 @@ Available variables are listed below, along with default values (see `vars/Debia
     webserver_apache_manager: apache2ctl
     webserver_apache_site_dir: "/etc/{{ webserver_apache_name }}/sites-available"
 
-These variables are set for usage with the Apache2 webserver.
+These variables describe the Apache2 webserver.
 
     webserver_nginx_name: nginx
     webserver_nginx_user: nginx
@@ -37,7 +55,7 @@ These variables are set for usage with the Apache2 webserver.
     webserver_nginx_manager: nginx
     webserver_nginx_site_dir: "/etc/{{ webserver_nginx_name }}/conf.d"
 
-These variables are set for usage with the NGINX webserver.
+These variables describe the NGINX webserver.
 
 ## Dependencies
 

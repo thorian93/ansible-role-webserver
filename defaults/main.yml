@@ -15,3 +15,5 @@ webserver_stable_os:
   - Ubuntu 20
 
 webserver_name: []
+webserver_user: []
+webserver_conf_file: []
