@@ -14,4 +14,10 @@
 
 - name: "Set Fact Webserver."
   set_fact:
-    webserver_name: "{% if 'apache2.service' in services %}apache{% elif 'httpd.service' in services %}apache{% elif 'nginx.service' in services %}nginx{% else %}none{% endif %}"
+    webserver_name: "{% if 'apache2.service' in services %}{{ webserver_apache_name }}{% elif 'httpd.service' in services %}{{ webserver_apache_name }}{% elif 'nginx.service' in services %}{{ webserver_nginx_name }}{% else %}none{% endif %}"
+    webserver_user: "{% if 'apache2.service' in services %}{{ webserver_apache_user }}{% elif 'httpd.service' in services %}{{ webserver_apache_user }}{% elif 'nginx.service' in services %}{{ webserver_nginx_user }}{% else %}none{% endif %}"
+    webserver_conf_file: "{% if 'apache2.service' in services %}{{ webserver_apache_conf_file }}{% elif 'httpd.service' in services %}{{ webserver_apache_conf_file }}{% elif 'nginx.service' in services %}{{ webserver_nginx_conf_file }}{% else %}none{% endif %}"
+
+- name: "Print Webserver Facts."
+  debug:
+    msg: "Name: {{ webserver_name }} | User: {{ webserver_user }} | Main Conf File: {{ webserver_conf_file }}"
