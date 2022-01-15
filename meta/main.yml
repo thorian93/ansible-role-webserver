@@ -23,6 +23,7 @@ galaxy_info:
       versions:
         - Stretch
         - Buster
+        - Bullseye
     - name: Fedora
       versions:
         - 30
@@ -30,6 +31,7 @@ galaxy_info:
         - 32
         - 33
         - 34
+        - 35
     - name: opensuse
       versions:
         - 15.2
