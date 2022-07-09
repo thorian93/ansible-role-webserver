@@ -14,9 +14,9 @@
 
 - name: "Set Fact Webserver."
   set_fact:
-    webserver_name: "{% if 'apache2.service' in services %}{{ webserver_apache_name }}{% elif 'httpd.service' in services %}{{ webserver_apache_name }}{% elif 'nginx.service' in services %}{{ webserver_nginx_name }}{% else %}none{% endif %}"
-    webserver_user: "{% if 'apache2.service' in services %}{{ webserver_apache_user }}{% elif 'httpd.service' in services %}{{ webserver_apache_user }}{% elif 'nginx.service' in services %}{{ webserver_nginx_user }}{% else %}none{% endif %}"
-    webserver_conf_file: "{% if 'apache2.service' in services %}{{ webserver_apache_conf_file }}{% elif 'httpd.service' in services %}{{ webserver_apache_conf_file }}{% elif 'nginx.service' in services %}{{ webserver_nginx_conf_file }}{% else %}none{% endif %}"
+    webserver_name: "{% if 'apache2.service' in services %}{{ webserver_apache_name }}{% elif 'httpd.service' in services %}{{ webserver_apache_name }}{% elif 'nginx.service' in services %}{{ webserver_nginx_name }}{% else %}none{% endif %}"  # noqa line-length
+    webserver_user: "{% if 'apache2.service' in services %}{{ webserver_apache_user }}{% elif 'httpd.service' in services %}{{ webserver_apache_user }}{% elif 'nginx.service' in services %}{{ webserver_nginx_user }}{% else %}none{% endif %}"  # noqa line-length
+    webserver_conf_file: "{% if 'apache2.service' in services %}{{ webserver_apache_conf_file }}{% elif 'httpd.service' in services %}{{ webserver_apache_conf_file }}{% elif 'nginx.service' in services %}{{ webserver_nginx_conf_file }}{% else %}none{% endif %}"  # noqa line-length
 
 - name: "Print Webserver Facts."
   debug:

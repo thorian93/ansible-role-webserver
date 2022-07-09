@@ -11,11 +11,13 @@ webserver_stable_os:
   - Fedora 33
   - Fedora 34
   - Fedora 35
+  - Fedora 36
   - openSUSE Leap 15
   - openSUSE Leap 42
   - Ubuntu 16
   - Ubuntu 18
   - Ubuntu 20
+  - Ubuntu 22
 
 webserver_name: []
 webserver_user: []
