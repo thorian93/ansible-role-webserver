@@ -1,5 +1,14 @@
 # Ansible Role: Webserver
 
+---
+
+## Unmaintained! Moved to collection!
+This role has moved to my [**web** collection](https://github.com/thorian93/web).  
+It is **not** maintained here anymore!  
+Head over to the [collection](https://github.com/thorian93/web) for up to date content.
+
+---
+
 This role is a meta role to enable unified usage of webserver roles. It provides variables to be used in different roles.
 
 [![Ansible Role: Webserver](https://img.shields.io/ansible/role/55151?style=flat-square)](https://galaxy.ansible.com/thorian93/webserver)
