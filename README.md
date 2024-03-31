@@ -3,9 +3,11 @@
 ---
 
 ## Unmaintained! Moved to collection!
-This role has moved to my [**web** collection](https://github.com/thorian93/web).  
-It is **not** maintained here anymore!  
-Head over to the [collection](https://github.com/thorian93/web) for up to date content.
+This role has moved to my [**main** collection](https://github.com/thorian93/main).
+
+It is **not** maintained here anymore!
+
+Head over to the [collection](https://github.com/thorian93/main) for up to date content.
 
 ---
 
